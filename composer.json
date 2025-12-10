@@ -1,0 +1,13 @@
+{
+    "name": "root/dd_mini_crawler",
+    "description": "Dimitrios Dimopoulos mini crawler",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Dimitrios Dimopoulos"
+        }
+    ],
+    "require": {
+        "simplehtmldom/simplehtmldom": "dev-master"
+    }
+}
