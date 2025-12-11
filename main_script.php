@@ -2,18 +2,15 @@
 
     require 'vendor/simplehtmldom/simplehtmldom/simple_html_dom.php';
 
-    $crawler = new MiniCrawler('products.txt');
+    $crawler = new MiniCrawler();
     $crawler->start_process();
     $crawler->print_db_info();
 
     class MiniCrawler {
 
-        var $filename = '';
         var $db = null;
 
-        function __construct( $inputFileName ){
-
-            $this->filename = $inputFileName;
+        function __construct(){
 
             unlink('log.txt');
             file_put_contents('log.txt', "\n");
@@ -36,16 +33,6 @@
         }
 
         public function start_process(){
-
-            if($this->filename==''){
-                $this->save_to_log_file( 'ERROR', 'LOG', date('Y-m-d h:i:s'), 'Empty Filename', '', '' );
-                exit("Empty filename!\n");
-            }
-
-            if(!file_exists($this->filename)){
-                $this->save_to_log_file( 'ERROR', 'LOG', date('Y-m-d h:i:s'), 'File does not exist', '', '' );
-                exit("File does not exist!\n");
-            }
 
             echo "Crawling process starts!\n";
             $this->save_to_log_file( 'INFO', 'LOG', date('Y-m-d h:i:s'), 'Crawling process starts', '', '' );
@@ -80,14 +67,6 @@
                 "http://nosite.com",
                 "nothing"
             );
-
-            // $handle = fopen($this->filename, "r");
-            // if ($handle) {
-            //     while (($line = fgets($handle)) !== false) {
-            //         $urls[] = $line;
-            //     }
-            //     fclose($handle);
-            // }
 
             return $urls;
         }
