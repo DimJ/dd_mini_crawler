@@ -8,14 +8,14 @@ Linux system with the following:
 - PHP
 - CURL
 
-# INSTALLATION
+# Installation
 - git clone https://github.com/DimJ/dd_mini_crawler.git
 - cd dd_mini_crawler
 - composer install
 
-# EXECUTION
+# Execution
 - php main_script.php
 
-# MODIFY LIST OF PRODUCTS
+# Modify list of products
 Change the list of products in function get_file_urls (#60)
   
