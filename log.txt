@@ -1,0 +1,84 @@
+
+INFO | LOG | 2025-12-11 11:01:40 | SQL Table is created | We can proceed with the parsing process. | 
+INFO | LOG | 2025-12-11 11:01:41 | Crawling process starts |  | 
+INFO | LOG | 2025-12-11 11:01:41 | Parsing starts |  | https://christopherfarrcloth.com/drizzle-indoor-woven/
+
+INFO | FETCH | 2025-12-11 11:01:42 | Fetched url with code 1 |  | https://christopherfarrcloth.com/drizzle-indoor-woven/
+
+INFO | PARSE | 2025-12-11 11:01:42 | Parsed url with code 1 |  | https://christopherfarrcloth.com/drizzle-indoor-woven/
+
+INFO | EXTRACT | 2025-12-11 11:01:42 | Extracted title | Drizzle Upholstery Fabric – Textured Multi-Stripe Fabric | Contemporary Interiors | 
+INFO | EXTRACT | 2025-12-11 11:01:42 | Extracted attributes | 25000
+Nendo
+38% Cotton 17% Linen 13% Polyester 13% Polyacrylic 11% Wool 8% Polyamide
+ | 
+INFO | SAVE | 2025-12-11 11:01:42 | Saved entry to sqlite |  | https://christopherfarrcloth.com/drizzle-indoor-woven/
+
+INFO | LOG | 2025-12-11 11:01:42 | Parsing is over |  | https://christopherfarrcloth.com/drizzle-indoor-woven/
+
+INFO | LOG | 2025-12-11 11:01:42 | Parsing starts |  | https://jiunho.com/product/product_view/0/3337/light/0
+
+INFO | FETCH | 2025-12-11 11:01:44 | Fetched url with code 2 |  | https://jiunho.com/product/product_view/0/3337/light/0
+
+INFO | PARSE | 2025-12-11 11:01:44 | Parsed url with code 2 |  | https://jiunho.com/product/product_view/0/3337/light/0
+
+INFO | EXTRACT | 2025-12-11 11:01:44 | Extracted title | Bergen Pendant in Jiun Ho Inc | 
+INFO | EXTRACT | 2025-12-11 11:01:44 | Extracted description | Inspired by the phases of the moon, the arms are modularly designed to rotate 270 degrees and the shades pivot creating a mobile-like effect
+Single Arm (a) - Electrical: 2 x LED 9.6 W/M 3000K & CRI 90
+Double Arm (b) - Electrical 4 x LED 9.6 W/M 3000K & CRI 90
+Triple Arm (c) - Electrical 6 x LED 9.6 W/M 3000K & CRI 90
+
+Shade: Alabaster / Acrylic
+Other Information: UL approved (or equivalent) for damp location, LED included with fixture
+Dimming included (embedded in canopy)
+
+Std. Overall Height: 24" - 48", $125USD per additional 12" height
+ | 
+INFO | SAVE | 2025-12-11 11:01:44 | Saved entry to sqlite |  | https://jiunho.com/product/product_view/0/3337/light/0
+
+INFO | LOG | 2025-12-11 11:01:44 | Parsing is over |  | https://jiunho.com/product/product_view/0/3337/light/0
+
+INFO | LOG | 2025-12-11 11:01:44 | Parsing starts |  | https://jiunho.com/product/product_view/0/1786/furniture/0
+
+INFO | FETCH | 2025-12-11 11:01:45 | Fetched url with code 3 |  | https://jiunho.com/product/product_view/0/1786/furniture/0
+
+INFO | PARSE | 2025-12-11 11:01:45 | Parsed url with code 3 |  | https://jiunho.com/product/product_view/0/1786/furniture/0
+
+INFO | EXTRACT | 2025-12-11 11:01:45 | Extracted title | Atacama Table in Jiun Ho Inc | 
+INFO | EXTRACT | 2025-12-11 11:01:45 | Extracted description | Inspired by the mammoth cacti of the Atacama desert of South America
+Top : Lacquer or Oak, straight grain detail
+Base : Sandblasted Oak
+Base Detail : Metal / Cinnamon or Metal / Espresso
+
+15% up-charge: Walnut
+15% up-charge: Sandblasted or Ceruse
+ | 
+INFO | SAVE | 2025-12-11 11:01:45 | Saved entry to sqlite |  | https://jiunho.com/product/product_view/0/1786/furniture/0
+
+INFO | LOG | 2025-12-11 11:01:45 | Parsing is over |  | https://jiunho.com/product/product_view/0/1786/furniture/0
+
+INFO | LOG | 2025-12-11 11:01:45 | Parsing starts |  | https://jiunho.com/product/product_view/error
+
+INFO | FETCH | 2025-12-11 11:01:46 | Fetched url with code 4 |  | https://jiunho.com/product/product_view/error
+
+INFO | PARSE | 2025-12-11 11:01:46 | Parsed url with code 4 |  | https://jiunho.com/product/product_view/error
+
+INFO | EXTRACT | 2025-12-11 11:01:46 | Could not extract title |  | 
+INFO | LOG | 2025-12-11 11:01:46 | Parsing is over |  | https://jiunho.com/product/product_view/error
+
+INFO | LOG | 2025-12-11 11:01:46 | Parsing starts |  | http://nosite.com
+
+INFO | FETCH | 2025-12-11 11:01:46 | Fetched url with code 5 |  | http://nosite.com
+
+INFO | PARSE | 2025-12-11 11:01:46 | Parsed url with code 5 |  | http://nosite.com
+
+INFO | EXTRACT | 2025-12-11 11:01:46 | Extracted title | nosite.com | 
+INFO | SAVE | 2025-12-11 11:01:46 | Saved entry to sqlite |  | http://nosite.com
+
+INFO | LOG | 2025-12-11 11:01:46 | Parsing is over |  | http://nosite.com
+
+INFO | LOG | 2025-12-11 11:01:46 | Parsing starts |  | nothing
+INFO | FETCH | 2025-12-11 11:02:06 | Retry procedure |  | nothing
+ERROR | LOG | 2025-12-11 11:02:06 | Not valid url |  | nothing
+INFO | LOG | 2025-12-11 11:02:06 | Parsing is over |  | nothing
+INFO | LOG | 2025-12-11 11:02:06 | Crawling process is over |  | 
