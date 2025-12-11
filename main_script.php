@@ -18,19 +18,19 @@
             unlink('log.txt');
             file_put_contents('log.txt', "\n");
 
-            $this->db = new PDO('sqlite:products.sqlite');
+            if (!$this->command_exist('curl')) {
+                $this->save_to_log_file( 'ERROR', 'LOG', date('Y-m-d h:i:s'), 'SQL Could not create table', 'CURL command does not exist.', '' );
+                exit('CURL command does not exist.');
+            }
+
             try {
+                $this->db = new PDO('sqlite:products.sqlite');
                 $sql = "CREATE TABLE SITE_INFO (ID INT PRIMARY KEY NOT NULL, TITLE TEXT NOT NULL, ATTRIBUTES TEXT NOT NULL, DESCR TEXT NOT NULL); ";
                 $this->db->exec($sql);
                 $this->save_to_log_file( 'INFO', 'LOG', date('Y-m-d h:i:s'), 'SQL Table is created', 'We can proceed with the parsing process.', '' );
             } catch(PDOException $e) {
                 $this->save_to_log_file( 'ERROR', 'LOG', date('Y-m-d h:i:s'), 'SQL Could not create table', $e->getMessage(), '' );
-                exit($e->getMessage());
-            }
-
-            if (!$this->command_exist('curl')) {
-                $this->save_to_log_file( 'ERROR', 'LOG', date('Y-m-d h:i:s'), 'SQL Could not create table', 'CURL command does not exist.', '' );
-                exit('CURL command does not exist.');
+                exit('SQLite: '.$e->getMessage());
             }
 
         }
@@ -72,14 +72,22 @@
 
         private function get_file_urls(){
 
-            $urls = array();
-            $handle = fopen($this->filename, "r");
-            if ($handle) {
-                while (($line = fgets($handle)) !== false) {
-                    $urls[] = $line;
-                }
-                fclose($handle);
-            }
+            $urls = array(
+                "https://christopherfarrcloth.com/drizzle-indoor-woven/",
+                "https://jiunho.com/product/product_view/0/3337/light/0",
+                "https://jiunho.com/product/product_view/0/1786/furniture/0",
+                "https://jiunho.com/product/product_view/error",
+                "http://nosite.com",
+                "nothing"
+            );
+
+            // $handle = fopen($this->filename, "r");
+            // if ($handle) {
+            //     while (($line = fgets($handle)) !== false) {
+            //         $urls[] = $line;
+            //     }
+            //     fclose($handle);
+            // }
 
             return $urls;
         }
